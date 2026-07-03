@@ -1,5 +1,8 @@
+# 노션에 연결중인 현재가 DB의 토큰값.
 NOTION_TOKEN = os.environ["NOTION_TOKEN"]
 
-DATABASE_ID
+# 국장종목 DB 링크
+NOTION_PRICE_DB_ID = os.environ["NOTION_PRICE_DB_ID"]
+
 
 TIMEZONE
