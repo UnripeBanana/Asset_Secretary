@@ -5,69 +5,9 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 import requests
 
-def get_all_pages(database_id):
-    pages = []
-    cursor = None
 
-    while True:
-        if cursor:
-            response = notion.databases.query(
-                database_id=database_id,
-                start_cursor=cursor
-            )
-        else:
-            response = notion.databases.query(
-                database_id=database_id
-            )
 
-        pages.extend(response["results"])
 
-        if not response["has_more"]:
-            break
-
-        cursor = response["next_cursor"]
-
-    return pages
-
-def rich_text(value):
-    return {
-        "rich_text": [
-            {
-                "type": "text",
-                "text": {
-                    "content": str(value) if value else ""
-                }
-            }
-        ]
-    }
-def get_naver_price(code):
-
-    headers = {
-        "User-Agent": "Mozilla/5.0"
-    }
-
-    url = (
-        f"https://polling.finance.naver.com/api/realtime"
-        f"?query=SERVICE_ITEM:{code}"
-    )
-
-    data = requests.get(
-        url,
-        headers=headers,
-        timeout=10
-    ).json()
-
-    item = data["result"]["areas"][0]["datas"][0]
-    print(item)
-    
-    return {
-        "price": item["nv"],
-        "change": item["cv"],
-        "rate": item["cr"],
-        "rf": item["rf"],
-        "cr": item["cr"],
-        "countOfListedStock": item["countOfListedStock"]
-    }
 
 NOTION_TOKEN = os.environ["NOTION_TOKEN"]
 DATABASE_ID = os.environ["NOTION_PRICE_DB_ID"]
