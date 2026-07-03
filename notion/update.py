@@ -7,6 +7,17 @@ NOTION_TOKEN = os.environ["NOTION_TOKEN"]
 
 notion = Client(auth=NOTION_TOKEN)
 
+def rich_text(value):
+    return {
+        "rich_text": [
+            {
+                "type": "text",
+                "text": {
+                    "content": str(value) if value else ""
+                }
+            }
+        ]
+    }
 
 def update_trade_page(page_id, remaining=None, profit=None):
 
