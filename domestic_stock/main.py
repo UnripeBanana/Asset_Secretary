@@ -14,4 +14,4 @@ for page in get_all_pages(NOTION_PRICE_DB_ID):
       **get_yfinance_prop(ticker)
   }
 
-  
+  update_stock_DB(stock_info)
