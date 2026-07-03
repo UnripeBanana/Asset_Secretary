@@ -37,7 +37,7 @@ def get_naver_price(code):
     }
 
 
-def update_stock_prices():
+def give_properties():
 
     ticker = ticker()
 
