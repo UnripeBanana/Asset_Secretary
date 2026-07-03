@@ -1,7 +1,7 @@
 
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from utils.logger import 
+from utils.logger import logger
 
 
 
@@ -59,10 +59,8 @@ def update_stock_prices():
             sector = info.get("sector")
             industry = info.get("industry")
 
-            
-            update_time = datetime.now(
-                ZoneInfo("Asia/Seoul")
-            ).strftime("%Y-%m-%d %H:%M")
+            # 업데이트 시간 기록
+            logger()
 
             properties = {
                 "현재가_깃허브_원본": {
