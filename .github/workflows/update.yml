@@ -23,3 +23,9 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_PRICE_DB_ID: ${{ secrets.NOTION_PRICE_DB_ID }}
           NOTION_TRADE_DB_ID: ${{ secrets.NOTION_TRADE_DB_ID }}
+          NOTION_ALLOCATION_DB_ID: ${{ secrets.NOTION_ALLOCATION_DB_ID }}
+          NOTION_ASSET_DB_ID: ${{ secrets.NOTION_ASSET_DB_ID }}
+          NOTION_REBALANCE_DB_ID: ${{ secrets.NOTION_REBALANCE_DB_ID }}
+          NOTION_DOMESTIC_STOCK_POSSESSION_DB_ID: ${{ secrets.NOTION_DOMESTIC_STOCK_POSSESSION_DB_ID }}
+          NOTION_DIVIDEND_DB_ID: ${{ secrets.NOTION_DIVIDEND_DB_ID }}
+          NOTION_REVENUE_DB_ID: ${{ secrets.NOTION_REVENUE_DB_ID }}
