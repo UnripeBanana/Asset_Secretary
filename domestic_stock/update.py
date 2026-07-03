@@ -2,7 +2,7 @@
 
 from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 from data.domestic_stock import get_naver_prop, get_yfinance_prop
-from utils.logger import 
+from utils.logger import logging
 
 def update_stock_DB(page, stock_info):
 
@@ -38,7 +38,7 @@ def update_stock_DB(page, stock_info):
         "국가": rich_text(stock_info["country"]),
         "업종": rich_text(stock_info["sector"]),
         "산업": rich_text(stock_info["industry"]),
-        "마지막 업데이트": rich_text(stock_info[""])
+        "마지막 업데이트": rich_text(logging())
     }
     
     notion.pages.update(
