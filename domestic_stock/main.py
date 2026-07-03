@@ -1,4 +1,4 @@
-
+from notion.get_all_pages import get_all_pages
 
 for page in get_all_pages(DATABASE_ID):
 
