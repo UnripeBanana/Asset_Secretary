@@ -5,7 +5,7 @@ def gold_main (pages):
   for page in pages:
     gold_info = get_gold_price(page)
   
-    update_KRX_GOLD_INFO_DB(gold_info)
+    update_KRX_GOLD_INFO_DB(page, gold_info)
 
 """
   "price": int(gold["closePrice"].replace(",", "")),           # 현재가
