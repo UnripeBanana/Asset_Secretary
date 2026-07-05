@@ -1,10 +1,4 @@
-from notion_client import Client
-import os
-
-NOTION_TOKEN = os.environ["NOTION_TOKEN"]
-
-notion = Client(auth=NOTION_TOKEN)
-
+from notion.client import notion # notion : 로그인 된 앱에 접근할 수 있도록 해주는 역할
 
 def update_trade_page(page_id, remaining=None, profit=None):
 
