@@ -1,4 +1,3 @@
-from config import NOTION_TRADE_DB_ID
 from domestic_stock_trade.read import read_trade_db
 from domestic_stock_trade.update import update_trade_page
 from trade.fifo import group_by_ticker, process_fifo
