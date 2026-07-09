@@ -18,20 +18,20 @@ def read_trade_db(NOTION_KRX_GOLD_TRADE_DB_ID):
 
             # 관계형
             "ticker": (
-                props["종목명"]["select"]["name"]
-                if props["종목명"]["select"] else None
+                props["종목"]["select"]["name"]
+                if props["종목"]["select"] else None
             ),
 
             # 선택
             "type": props["매수/매도"]["select"]["name"],
 
             # 날짜
-            "date": props["날짜"]["date"]["start"],
+            "date": props["거래일자"]["date"]["start"],
 
             # 숫자
-            "qty": props["수량"]["number"],
+            "qty": props["거래량 (g)"]["number"],
 
-            "price": props["단가"]["number"],
+            "price": props["1g 당 가격"]["number"],
 
             "amount": props["거래금액"]["formula"]["number"]
 
