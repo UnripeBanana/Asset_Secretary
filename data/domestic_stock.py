@@ -22,6 +22,10 @@ def get_naver_prop(ticker):
     ).json()
 
     item = data["result"]["areas"][0]["datas"][0]
+
+    # 임시로 넣은 코드
+    import json
+    print(json.dumps(item, indent=4, ensure_ascii=False))
   
     return {
         "price": item["nv"],   # 현재가
