@@ -5,6 +5,7 @@ from domestic_stock.main import domestic_stock_main
 from domestic_stock_trade.main import domestic_stock_trade_main
 from gold.main import gold_main
 from gold_trade.main import gold_trade_main
+from domestic_bond_etf import domestic_bond_etf_DB_main
 
 # 초기 개발 완료
 #domestic_stock_main(get_all_pages(NOTION_PRICE_DB_ID))
