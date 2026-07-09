@@ -34,7 +34,6 @@ def read_trade_db(NOTION_KRX_GOLD_TRADE_DB_ID):
             "price": props["1g 당 가격"]["number"],
 
             "amount": props["거래금액"]["formula"]["number"]
-
         }
 
         trades.append(trade)
