@@ -2,8 +2,8 @@ from domestic_stock_trade.read import read_trade_db
 from domestic_stock_trade.update import update_trade_page
 from trade.fifo import group_by_ticker, process_fifo
 
-def domestic_stock_trade_main(NOTION_TRADE_DB_ID):
-    trades = read_trade_db(NOTION_TRADE_DB_ID)
+def domestic_stock_trade_main(NOTION_KRX_GOLD_TRADE_DB_ID):
+    trades = read_trade_db(NOTION_KRX_GOLD_TRADE_DB_ID)
     trades.sort(key=lambda x: x["date"])
     
     groups = group_by_ticker(trades)
